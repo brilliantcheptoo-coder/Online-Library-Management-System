@@ -1,0 +1,21 @@
+#include "Library.h"
+
+int main() {
+    Library* lib = Library::getInstance();
+    
+    // Add books
+    Book book1("978-3-16-148410-0", "C++ Programming", "Bjarne Stroustrup", 2013, "Programming");
+    lib->addBook(book1);
+    
+    // Add user
+    int userId = lib->addUser("John Doe", "john@email.com");
+    
+    // Borrow book
+    lib->borrowBook(userId, "978-3-16-148410-0");
+    
+    // Display statistics
+    cout << "Total books: " << lib->getTotalBooks() << endl;
+    cout << "Available books: " << lib->getAvailableBooks() << endl;
+    
+    return 0;
+}

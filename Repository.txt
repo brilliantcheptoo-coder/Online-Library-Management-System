@@ -1,0 +1,16 @@
+library-management-system/
+├── src/
+│   ├── Book.cpp
+│   ├── Book.h
+│   ├── User.cpp
+│   ├── User.h
+│   ├── Library.cpp
+│   ├── Library.h
+│   ├── main.cpp
+├── tests/
+│   ├── test_Book.cpp
+│   ├── test_User.cpp
+│   ├── test_Library.cpp
+├── Makefile
+├── README.md
+└── documentation.pdf

@@ -1,0 +1,50 @@
+#ifndef LIBRARY_H
+#define LIBRARY_H
+
+#include "Book.h"
+#include "User.h"
+#include <vector>
+#include <map>
+#include <string>
+
+class Library {
+private:
+    static Library* instance;
+    std::map<std::string, Book*> books; // ISBN -> Book
+    std::map<int, User*> users; // UserID -> User
+    int nextUserId;
+    
+    Library(); // Private constructor for singleton
+    
+public:
+    static Library* getInstance();
+    
+    // Book management
+    bool addBook(const Book& book);
+    bool removeBook(const std::string& isbn);
+    Book* searchByISBN(const std::string& isbn);
+    std::vector<Book*> searchByTitle(const std::string& title);
+    std::vector<Book*> searchByAuthor(const std::string& author);
+    
+    // User management
+    int addUser(const std::string& name, const std::string& email);
+    bool removeUser(int userId);
+    User* getUser(int userId);
+    
+    // Borrowing operations
+    bool borrowBook(int userId, const std::string& isbn);
+    bool returnBook(int userId, const std::string& isbn);
+    
+    // Statistics
+    int getTotalBooks() const;
+    int getAvailableBooks() const;
+    int getTotalUsers() const;
+    
+    // File operations
+    bool saveToFile(const std::string& filename);
+    bool loadFromFile(const std::string& filename);
+    
+    ~Library();
+};
+
+#endif

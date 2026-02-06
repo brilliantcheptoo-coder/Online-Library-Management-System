@@ -1,0 +1,29 @@
+Test Cases
+
+Positive Test Cases
+
+1. Book Tests: Create valid book, display info, change availability
+2. User Tests: Create user, borrow within limits, return books
+3. Library Tests: Add/remove books, search functionality, user management
+
+Negative Test Cases
+
+1. Invalid ISBN format
+2. Borrowing unavailable books
+3. Exceeding borrow limits
+4. Non-existent book/user operations
+5. Duplicate book/user additions
+
+Edge Cases
+
+1. Empty library operations
+2. Maximum capacity scenarios
+3. Concurrent borrow attempts
+4. Date boundary conditions for due dates
+
+How to Compile and Run
+
+Prerequisites
+
+· C++17 compatible compiler (g++ 7+)
+· Make utility

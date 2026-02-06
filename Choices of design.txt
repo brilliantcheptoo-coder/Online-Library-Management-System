@@ -1,0 +1,29 @@
+Design Choices
+
+1. Class Design
+
+Book Class
+
+· Attributes: ISBN (unique identifier), title, author, year, genre, availability status
+· Methods: Getters/setters, display function, status management
+· Encapsulation: All attributes are private with public accessors
+
+User Class
+
+· Attributes: User ID, name, email, borrowed books list, maximum borrow limit
+· Methods: Borrow/return operations, history tracking, fine calculation
+· Inheritance: Base User class can be extended to different user types (Student, Faculty)
+
+Library Class
+
+· Attributes: Collections of books and users (using STL containers)
+· Methods: CRUD operations for books/users, search functions, statistics
+· Singleton Pattern: Ensures single library instance
+
+2. Key Features
+
+· ISBN Validation: 13-digit format validation
+· Search Capabilities: Search by title, author, genre, or ISBN
+· Borrowing System: Limit checks, due date tracking, fine calculation
+· Error Handling: Comprehensive exception handling
+· Data Persistence: File I/O for saving/loading library state
